@@ -1,5 +1,6 @@
 import { ModeToggle } from "@/components/ui/ModeToggle";
 import home from "../assets/home.svg";
+import { Link } from "react-router";
 const Navigation = () => {
   return (
     <nav className="bg-white shadow-md px-6 py-3 flex items-center justify-between">
@@ -11,19 +12,19 @@ const Navigation = () => {
 
       {/* Navigation Links */}
       <div className="flex gap-4">
-        <a
-          href="/"
+        <Link
+          to="/tasks"
           className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded transition"
         >
-          Home
-        </a>
-        <a
-          href="/login"
+          Task
+        </Link>
+        <Link
+          to="/user"
           className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
         >
-          Login
-        </a>
-        <ModeToggle  />
+          users
+        </Link>
+        <ModeToggle />
       </div>
     </nav>
   );
